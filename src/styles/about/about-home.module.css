@@ -1,0 +1,141 @@
+.aboutContainer {
+   width: 60%;
+   margin: 5% auto;
+   margin-bottom: 0;
+   padding: 0;
+}
+
+.aboutHeader {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 5%;
+}
+
+.aboutHeaderContent {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.aboutHeaderContent h1:nth-child(1) {
+   font-size: 1em;
+   color: orange;
+   font-family: sans-serif;
+}
+
+
+.aboutHeaderContent h1:nth-child(2) {
+   font-size: 1.9em;
+   color: #000;
+   font-family: sans-serif;
+   margin-top: 5px;
+}
+
+.aboutImageContainer {
+   width: 100%;
+}
+
+.aboutImageContainer .aboutImg {
+   height: auto;
+   width: 100%;
+   margin-top: 20px;
+   filter: brightness(50%);
+   border-radius: 5px;
+}
+
+.description {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: flex-start;
+   margin-top: 10px;
+}
+
+
+.description .header h1 {
+   font-family: sans-serif;
+   font-size: 1.9em;
+}
+
+.des {
+   margin-top: 20px;
+}
+
+.des p {
+   font-family: sans-serif;
+   font-size: 1em;
+   font-weight: 100;
+}
+
+.cta {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.cta button {
+   width: 200px;
+   height: 50px;
+   background: none;
+   color: orange;
+   border: 1px solid orange;
+   cursor: pointer;
+   font-weight: 700;
+   border-radius: 5px;
+   font-size: 1em;
+}
+
+.cta button:hover {
+   background-color: orange;
+   color: #fff;
+}
+
+@media (max-width:700px) {
+   .aboutContainer {
+      width: 90%;
+      margin: 10% auto;
+   }
+
+   .aboutHeader {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 5%;
+   }
+
+   .aboutHeaderContent h1:nth-child(1) {
+      font-size: 0.9em;
+   }
+
+   .aboutHeaderContent h1:nth-child(2) {
+      font-size: 1.7em;
+   }
+
+
+   .description .header h1 {
+      font-family: sans-serif;
+      font-size: 1.7em;
+   }
+
+   .des {
+      margin-top: 15px;
+   }
+
+   .des p {
+      font-size: 0.95em;
+   }
+
+   .cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+   }
+
+   .cta button {
+      width: 160px;
+      height: 45px;
+      font-size: 1em;
+   }
+}
