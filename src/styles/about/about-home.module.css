@@ -139,3 +139,225 @@
       font-size: 1em;
    }
 }
+
+/*Desktop 1024 x 600 - 768*/
+@media (min-width:1024px) and (max-width: 1024px) and (min-height:600px) and (max-height:768px) {
+   .aboutContainer {
+      width: 85%;
+      margin: 7% auto;
+   }
+
+   .aboutHeaderContent h1:nth-child(1) {
+      font-size: 1em;
+   }
+
+
+   .aboutHeaderContent h1:nth-child(2) {
+      font-size: 1.6em;
+   }
+
+   .aboutImageContainer .aboutImg {
+      height: auto;
+      width: 100%;
+   }
+
+   .description .header h1 {
+      font-size: 1.6em;
+   }
+
+   .des p {
+      font-size: 1em;
+   }
+
+   .cta button {
+      width: 200px;
+      height: 50px;
+      font-size: 1em;
+   }
+
+}
+
+
+/*Desktop 1280 - 1440 x 768 - 900 */
+@media (min-width:1280px) and (max-width: 1440px) and (min-height:768px) and (max-height:900px) {
+   .aboutContainer {
+      width: 85%;
+      margin: 7% auto;
+   }
+
+   .aboutHeaderContent h1:nth-child(1) {
+      font-size: 1.1em;
+   }
+
+
+   .aboutHeaderContent h1:nth-child(2) {
+      font-size: 1.7em;
+   }
+
+   .aboutImageContainer .aboutImg {
+      height: auto;
+      width: 100%;
+   }
+
+   .description .header h1 {
+      font-size: 1.7em;
+   }
+
+   .des p {
+      font-size: 1.1em;
+   }
+
+   .cta button {
+      width: 200px;
+      height: 55px;
+      font-size: 1.1em;
+   }
+
+}
+
+
+/*Desktop 1680 - 1920 x 1050 - 1200  */
+@media (min-width:1680px) and (max-width: 1920px) and (min-height:1050px) and (max-height:1200px) {
+   .aboutContainer {
+      width: 80%;
+      margin: 7% auto;
+   }
+
+   .aboutHeaderContent h1:nth-child(1) {
+      font-size: 1.3em;
+   }
+
+
+   .aboutHeaderContent h1:nth-child(2) {
+      font-size: 1.9em;
+   }
+
+   .aboutImageContainer .aboutImg {
+      height: auto;
+      width: 100%;
+   }
+
+   .description .header h1 {
+      font-size: 1.9em;
+   }
+
+   .des p {
+      font-size: 1.3em;
+   }
+
+   .cta button {
+      width: 230px;
+      height: 60px;
+      font-size: 1.2em;
+   }
+}
+
+
+/*Desktop 2560 -  x 1440 -   */
+@media (min-width:2560px) and (max-width: 2560px) and (min-height:1440px) and (max-height:1440px) {
+   .aboutContainer {
+      width: 80%;
+      margin: 7% auto;
+   }
+
+   .aboutHeaderContent h1:nth-child(1) {
+      font-size: 1.5em;
+   }
+
+
+   .aboutHeaderContent h1:nth-child(2) {
+      font-size: 2.2em;
+   }
+
+   .aboutImageContainer .aboutImg {
+      height: auto;
+      width: 100%;
+   }
+
+   .description .header h1 {
+      font-size: 2.2em;
+   }
+
+   .des p {
+      font-size: 1.5em;
+   }
+
+   .cta button {
+      width: 260px;
+      height: 75px;
+      font-size: 1.5em;
+   }
+}
+
+/*Desktop 3840 - 4096  x 2160 - 2304 */
+@media (min-width:3840px) and (max-width: 4096px) and (min-height:2160px) and (max-height:2304px) {
+   .aboutContainer {
+      width: 75%;
+      margin: 7% auto;
+   }
+
+   .aboutHeaderContent h1:nth-child(1) {
+      font-size: 1.7em;
+   }
+
+
+   .aboutHeaderContent h1:nth-child(2) {
+      font-size: 2.7em;
+   }
+
+   .aboutImageContainer .aboutImg {
+      height: auto;
+      width: 100%;
+   }
+
+   .description .header h1 {
+      font-size: 2.7em;
+   }
+
+   .des p {
+      font-size: 2em;
+   }
+
+   .cta button {
+      width: 300px;
+      height: 95px;
+      font-size: 1.7em;
+   }
+}
+
+
+/*Desktop 5120 -   x 2880 -  */
+@media (min-width:5120px) and (max-width: 5120px) and (min-height:2880px) and (max-height:2880px) {
+   .aboutContainer {
+      width: 70%;
+      margin: 7% auto;
+   }
+
+   .aboutHeaderContent h1:nth-child(1) {
+      font-size: 2em;
+   }
+
+
+   .aboutHeaderContent h1:nth-child(2) {
+      font-size: 3.5em;
+   }
+
+   .aboutImageContainer .aboutImg {
+      height: auto;
+      width: 100%;
+   }
+
+   .description .header h1 {
+      font-size: 3.5em;
+   }
+
+   .des p {
+      font-size: 2.3em;
+   }
+
+   .cta button {
+      width: 350px;
+      height: 125px;
+      font-size: 2em;
+   }
+}
