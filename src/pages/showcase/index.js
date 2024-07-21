@@ -121,7 +121,7 @@ function Index() {
 
               <div className={styles.link}>
                 <Link href="/" className={styles.a}>
-                  Contact Us
+                  Contact
                 </Link>
               </div>
             </div>

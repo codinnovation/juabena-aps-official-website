@@ -5,17 +5,15 @@ import styles from '../styles/Home.module.css'
 
 function Input() {
    const [formData, setFormData] = useState({
-      descriptionsTagLine: "",
-      mainTagline1: "",
-      mainTagline2: "",
-      cta: "",
+      name: "",
+      message: "",
     });
 
     const handleFormSubmit = async (e) => {
       e.preventDefault();
   
       try {
-        const newStudentRef = push(ref(db, "showcaseDescriptions"), formData);
+        const newStudentRef = push(ref(db, "testimonials"), formData);
         const newStudentKey = newStudentRef.key;
         return newStudentKey;
       } catch (error) {
@@ -36,45 +34,28 @@ function Input() {
      <div>
      <div className={styles.container_items}>
             <form onSubmit={handleFormSubmit}>
-              <div className={styles.field}>
-                <label>descriptionsTagLine</label>
-                <input
-                  value={formData.descriptionsTagLine}
-                  name="descriptionsTagLine"
-                  placeholder="your name goes here..."
-                  onChange={handleInputChange}
-                />
-              </div>
-
+             
               <div className={styles.field}>
                 <label>mainTagline1</label>
                 <input
-                  value={formData.mainTagline1}
-                  name="mainTagline1"
+                  value={formData.name}
+                  name="name"
                   placeholder=""
                   onChange={handleInputChange}
                 />
               </div>
 
               <div className={styles.field}>
-                <label>mainTagline2</label>
+                <label>message</label>
                 <input
-                  value={formData.mainTagline2}
-                  name="mainTagline2"
+                  value={formData.message}
+                  name="message"
                   placeholder=""
                   onChange={handleInputChange}
                 />
               </div>
 
-              <div className={styles.field}>
-                <label>cta</label>
-                <input
-                  value={formData.cta}
-                  name="cta"
-                  placeholder=""
-                  onChange={handleInputChange}
-                />
-              </div>
+           
 
               <div className={styles.container_button}>
                 <button type="submit">Submit</button>
