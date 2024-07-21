@@ -1,28 +1,83 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/showcase.module.css";
 import Image from "next/image";
 import ShowCaseImage from "../../../public/logo2.png";
 import Link from "next/link";
 import Person from "@mui/icons-material/Person";
 import MenuIcon from "@mui/icons-material/Menu";
+import { db } from "../../../firebase.config";
+import { ref, get } from "firebase/database";
 
 function Index() {
+  const [showcaseData, setShowcaseData] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [fade, setFade] = useState("fadeIn");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const dbRef = ref(db, "showcaseDescriptions");
+        const response = await get(dbRef);
+        const data = response.val();
+
+        if (data && typeof data === "object") {
+          const dataArray = Object.entries(data).map(([key, value]) => ({
+            key,
+            ...value,
+          }));
+          setShowcaseData(dataArray);
+        } else {
+          setShowcaseData([]);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setShowcaseData([]);
+      }
+    };
+
+    // Delay fetching data by 3 seconds
+    const timer = setTimeout(() => {
+      fetchData();
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (showcaseData.length > 0) {
+      const interval = setInterval(() => {
+        setFade("fadeOut");
+        setTimeout(() => {
+          setCurrentIndex((prevIndex) => (prevIndex + 1) % showcaseData.length);
+          setFade("fadeIn");
+        }, 1000);
+      }, 4000);
+
+      return () => clearInterval(interval);
+    }
+  }, [showcaseData]);
+
+  const currentShowcase = showcaseData[currentIndex] || {};
+
   return (
     <>
       <div className={styles.showcaseContainer}>
         <div className={styles.backImage}>
-          <div className={styles.descriptions}>
+          <div className={`${styles.descriptions} ${styles[fade]}`}>
             <div className={styles.descriptionsTagLine}>
-              <p>Adventist School</p>
+              <p>{currentShowcase.descriptionsTagLine || "Adventist School"}</p>
             </div>
 
             <div className={styles.mainTagline}>
-              <h1>Welcome,</h1>
-              <h1>Nana Akosuah Akyamah Adventist Preporatory School</h1>
+              <h1>{currentShowcase.mainTagline1 || "Welcome,"}</h1>{" "}
+              <h1>
+                {currentShowcase.mainTagline2 ||
+                  "Nana Akosuah Akyamah Adventist Preparatory School"}
+              </h1>
             </div>
 
             <div className={styles.cta}>
-              <button>Learn More</button>
+              <button>{currentShowcase.cta || "Learn More"}</button>
             </div>
           </div>
         </div>
