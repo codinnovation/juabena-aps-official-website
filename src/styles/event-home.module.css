@@ -1,4 +1,4 @@
-.photoContainer {
+.eventContainer {
    background-color: #38206c;
    width: 100%;
    height: auto;
@@ -7,14 +7,14 @@
 
 }
 
-.photoContent {
+.eventContent {
    width: 60%;
    margin: 0% auto;
    margin-bottom: 10px;
 }
 
 
-.photoContent .header {
+.eventContent .header {
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -22,50 +22,61 @@
    margin-top: 20px;
 }
 
-.photoContent .header h1:nth-child(1) {
+.eventContent .header h1:nth-child(1) {
    font-size: 1em;
    color: orange;
    font-family: sans-serif;
 }
 
-.photoContent .header h1:nth-child(2) {
+.eventContent .header h1:nth-child(2) {
    font-size: 1.9em;
    color: #fff;
    font-family: sans-serif;
    margin-top: 5px;
 }
 
-.photoGrid {
+.eventGrid {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
    margin-top: 6%;
    gap: 5%;
 }
 
-.photoGrid .photo {
+.eventGrid .photo {
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   background-color: #fff;
+   padding: 10px;
 }
 
-.photoGrid .photo .img {
+.eventGrid .photo .img {
    height: auto;
-   width: 95%;
+   width: 75%;
+   
 }
 
-.photoGrid .photo p {
-   color: #fff;
+.eventGrid .photo p {
+   color: #000;
    font-size: 1em;
    font-family: sans-serif;
    margin-top: 10px;
+   text-align: center;
+}
+.eventGrid .photo button {
+   background-color: #38206c;
+   padding: 10px;
+   margin-top: 10px;
+   color: #fff;
+   border: none;
 }
 
 .btnAction {
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-top: 5%;
+   margin-top: 3%;
 }
 
 .btnAction .btn1 {
@@ -87,33 +98,29 @@
 }
 
 @media (max-width:700px) {
-   .photoContent {
+   .eventContent {
       width: 90%;
    }
 
 
-   .photoContent .header h1:nth-child(1) {
+   .eventContent .header h1:nth-child(1) {
       font-size: 0.95em;
    }
 
-   .photoContent .header h1:nth-child(2) {
+   .eventContent .header h1:nth-child(2) {
       font-size: 1.7em;
    }
 
-   .photoGrid {
+   .eventGrid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 4%;
    }
    
-   .photoGrid .photo p {
+   .eventGrid .photo p {
       font-size: 0.95em;
       margin-top: 10px;
       text-align: center;
-   }
-
-   .btnAction{
-      margin-top: 40%;
    }
    .btnAction .btn1 {
       margin: 15px;
