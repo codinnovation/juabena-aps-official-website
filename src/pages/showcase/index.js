@@ -12,6 +12,7 @@ function Index() {
   const [showcaseData, setShowcaseData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState("fadeIn");
+  const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -131,8 +132,55 @@ function Index() {
             </div>
 
             <div className={styles.menuIconContainer}>
-              <MenuIcon className={styles.menuIcon} />
+              <MenuIcon
+                className={styles.menuIcon}
+                onClick={() => setOpenMenu((prev) => !prev)}
+              />
             </div>
+
+            {openMenu && (
+              <>
+                <div className={styles.menuContainer}>
+                  <div className={styles.menuLinks}>
+                    <div className={styles.link}>
+                      <Link href="/" className={styles.a}>
+                        Home
+                      </Link>
+                    </div>
+
+                    <div className={styles.link}>
+                      <Link href="/" className={styles.a}>
+                        About
+                      </Link>
+                    </div>
+
+                    <div className={styles.link}>
+                      <Link href="/" className={styles.a}>
+                        Services
+                      </Link>
+                    </div>
+
+                    <div className={styles.link}>
+                      <Link href="/" className={styles.a}>
+                        Events
+                      </Link>
+                    </div>
+
+                    <div className={styles.link}>
+                      <Link href="/" className={styles.a}>
+                        Contact Us
+                      </Link>
+                    </div>
+
+                    <div className={styles.link}>
+                      <Link href="/" className={styles.login}>
+                        Login/Signup{" "}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

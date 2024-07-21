@@ -21,18 +21,18 @@
    align-items: center;
    flex-direction: column;
    width: 60%;
-   margin:  0 auto;
+   margin: 0 auto;
    transition: opacity 1s ease-in-out;
    opacity: 1;
 }
 
 .fadeOut {
    opacity: 0;
- }
- 
- .fadeIn {
+}
+
+.fadeIn {
    opacity: 1;
- }
+}
 
 .descriptionsTagLine {
    display: flex;
@@ -49,13 +49,14 @@
    text-align: center;
 
 }
+
 .mainTagline h1:first-of-type {
    animation-delay: 0.4s;
- }
- 
- .mainTagline h1:last-of-type {
+}
+
+.mainTagline h1:last-of-type {
    animation-delay: 0.6s;
- }
+}
 
 .mainTagline {
    display: flex;
@@ -94,7 +95,7 @@
    border: 1px solid orange;
    cursor: pointer;
    animation: bounceDown 5s ease-in-out;
-  animation-delay: 1s;
+   animation-delay: 1s;
 }
 
 .cta button:hover {
@@ -181,24 +182,60 @@
 
 @keyframes bounceDown {
    0% {
-     transform: translateY(-100%);
-     opacity: 0;
+      transform: translateY(-100%);
+      opacity: 0;
    }
+
    50% {
-     transform: translateY(20%);
-     opacity: 1;
+      transform: translateY(20%);
+      opacity: 1;
    }
+
    100% {
-     transform: translateY(0);
+      transform: translateY(0);
    }
- }
+}
 
 @media (max-width:700px) {
    .showcaseNavigation {
       border-bottom-left-radius: 75px;
       border-bottom-right-radius: 75px;
-      padding: 8px;
+      padding: 10px;
+      width: 95%;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+      transition: 1s ease-in-out;
    }
+
+   .menuContainer {
+      height: auto;
+   }
+
+   .menuLinks {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+   }
+
+   .menuLinks .link {
+      margin-top: 10px;
+   }
+
+   .menuLinks .link .a {
+      text-decoration: none;
+      color: #000;
+      font-family: sans-serif;
+      font-size: 0.9em;
+   }
+
+   .menuLinks .link .login {
+      text-decoration: none;
+      color: #000;
+      font-family: sans-serif;
+      font-size: 0.9em;
+      font-weight: 700;
+   }
+
 
    .navigationContent {
       grid-template-columns: 1fr 1fr;
@@ -250,12 +287,13 @@
    .descriptionsTagLine {
       margin-top: 10%;
    }
+
    .mainTagline h1 {
       font-size: 1.5em;
       color: #fff;
       text-align: center;
    }
-   
+
    .mainTagline h1:nth-child(2) {
       margin-top: 20px;
    }
