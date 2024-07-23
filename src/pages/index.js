@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
 import ShowCase from "../pages/showcase";
 import AboutHome from '../pages/about-home'
 import StartNow from './our-program'

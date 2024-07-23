@@ -1,0 +1,104 @@
+[
+   {
+     "icon": "CalendarMonth",
+     "title": "English Literacy",
+     "tag": "Nursery 1 to Nursery 2"
+   },
+   {
+     "icon": "School",
+     "title": "Creative Art",
+     "tag": "Nursery 1 to Nursery 2"
+   },
+   {
+     "icon": "Person",
+     "title": "Phonics Writing",
+     "tag": "Nursery 1 to Nursery 2"
+   },
+   {
+     "icon": "CalendarMonth",
+     "title": "Copy & Picture Reading",
+     "tag": "Nursery 1 to Nursery 2"
+   },
+   {
+     "icon": "School",
+     "title": "Numeracy",
+     "tag": "Nursery 1 to Nursery 2"
+   },
+   {
+     "icon": "Person",
+     "title": "OWOP",
+     "tag": "Nursery 1 to Nursery 2"
+   },
+   {
+     "icon": "CalendarMonth",
+     "title": "Copy & Picture Reading",
+     "tag": "Creche & Nursery 1 to Nursery 2"
+   },
+   {
+     "icon": "School",
+     "title": "Phonics Colouring",
+     "tag": "Creche & Nursery 1 to Nursery 2"
+   },
+
+   {
+      "icon": "School",
+      "title": "English Lan",
+      "tag": "Class 1 to Class 6"
+    },
+
+
+    {
+      "icon": "School",
+      "title": "Int Science",
+      "tag": "Class 1 to Class 6"
+    },
+
+
+    {
+      "icon": "School",
+      "title": "Creative Art",
+      "tag": "Class 1 to Class 6"
+    },
+
+
+    {
+      "icon": "School",
+      "title": "RME",
+      "tag": "Class 1 to Class 6"
+    },
+
+
+    {
+      "icon": "School",
+      "title": "Asante TWI",
+      "tag": "Class 1 to Class 6"
+    },
+
+
+    {
+      "icon": "School",
+      "title": "Mathematics",
+      "tag": "Class 1 to Class 6"
+    },
+
+    {
+      "icon": "School",
+      "title": "French",
+      "tag": "Class 1 to Class 6"
+    },
+
+    
+    {
+      "icon": "School",
+      "title": "Computing",
+      "tag": "Class 1 to Class 6"
+    },
+
+    
+    {
+      "icon": "School",
+      "title": "OWOP",
+      "tag": "Class 1 to Class 6"
+    }
+ ]
+ 

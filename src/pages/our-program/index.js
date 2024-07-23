@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/our-program.module.css";
 import CalenderIcon from "@mui/icons-material/CalendarMonth";
-import SchoolIcon from "@mui/icons-material/School"
+import SchoolIcon from "@mui/icons-material/School";
 import Person from "@mui/icons-material/Person";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import courses from "../../../courses";
 
 function Index() {
+  const item_per_page = 4;
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const handleNext = () => {
+    if ((currentPage + 1) * item_per_page < courses.length) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentPage > 0) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const startIndex = currentPage * item_per_page;
+  const endIndex = startIndex + item_per_page;
+  const visibleCourses = courses.slice(startIndex, endIndex);
+
   return (
     <>
       <div className={styles.startContainer}>
@@ -17,68 +36,29 @@ function Index() {
         </div>
 
         <div className={styles.cardGrid}>
-          <div className={styles.cardContainer}>
-            <div className={styles.iconContainer}>
-              <CalenderIcon className={styles.icon} />
-            </div>
+          {visibleCourses.map((data, index) => (
+            <div className={styles.cardContainer} key={index}>
+              <div className={styles.iconContainer}>
+                <SchoolIcon className={styles.icon} />
+              </div>
 
-            <div className={styles.cardName}>
-              <h1>An Easy Study Approach</h1>
+              <div className={styles.cardName}>
+                <h1>{data?.title}</h1>
+              </div>
+              <div className={styles.cardNameTag}>
+                <p>{data?.tag}</p>
+              </div>
             </div>
-            <div className={styles.cardNameTag}>
-              <p>Nursery 1 to Class 6</p>
-            </div>
-          </div>
-
-          <div className={styles.cardContainer}>
-            <div className={styles.iconContainer}>
-              <SchoolIcon className={styles.icon} />
-            </div>
-
-            <div className={styles.cardName}>
-              <h1>Free
-              Teaching Materials</h1>
-            </div>
-            <div className={styles.cardNameTag}>
-              <p>Class 1 to Class 6</p>
-            </div>
-          </div>
-
-          <div className={styles.cardContainer}>
-            <div className={styles.iconContainer}>
-              <Person className={styles.icon} />
-            </div>
-
-            <div className={styles.cardName}>
-              <h1>An Easy Study Approach</h1>
-            </div>
-            <div className={styles.cardNameTag}>
-              <p>Class 1 to KG 6</p>
-            </div>
-          </div>
-
-          <div className={styles.cardContainer}>
-            <div className={styles.iconContainer}>
-              <CalenderIcon className={styles.icon} />
-            </div>
-
-            <div className={styles.cardName}>
-              <h1>An Easy Study Approach</h1>
-            </div>
-
-            <div className={styles.cardNameTag}>
-              <p>Class 1 to Class 6</p>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className={styles.btnAction}>
-          <div className={styles.btn1}>
-            <ArrowBackIcon/>
+          <div className={styles.btn1} onClick={handlePrev}>
+            <ArrowBackIcon />
           </div>
 
-          <div className={styles.btn1}>
-            <ArrowForwardIcon/>
+          <div className={styles.btn1} onClick={handleNext}>
+            <ArrowForwardIcon />
           </div>
         </div>
       </div>
